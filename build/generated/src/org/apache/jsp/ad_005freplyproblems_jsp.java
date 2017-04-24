@@ -1,0 +1,352 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.sql.*;
+
+public final class ad_005freplyproblems_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write('\n');
+ Class.forName("com.mysql.jdbc.Driver");
+
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("\n");
+      out.write("<head>\n");
+      out.write("  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("  <!-- Meta, title, CSS, favicons, etc. -->\n");
+      out.write("  <meta charset=\"utf-8\">\n");
+      out.write("  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
+      out.write("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("\n");
+      out.write("  <title>NationalBank Admin </title>\n");
+      out.write("\n");
+      out.write("  <!-- Bootstrap core CSS -->\n");
+      out.write("\n");
+      out.write("  <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("\n");
+      out.write("  <link href=\"fonts/css/font-awesome.min.css\" rel=\"stylesheet\">\n");
+      out.write("  <link href=\"css/animate.min.css\" rel=\"stylesheet\">\n");
+      out.write("\n");
+      out.write("  <!-- Custom styling plus plugins -->\n");
+      out.write("  <link href=\"css/custom.css\" rel=\"stylesheet\">\n");
+      out.write("  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/maps/jquery-jvectormap-2.0.3.css\" />\n");
+      out.write("  <link href=\"css/icheck/flat/green.css\" rel=\"stylesheet\" />\n");
+      out.write("  <link href=\"css/floatexamples.css\" rel=\"stylesheet\" type=\"text/css\" />\n");
+      out.write("\n");
+      out.write("  <script src=\"js/jquery.min.js\"></script>\n");
+      out.write("  <script src=\"js/nprogress.js\"></script>\n");
+      out.write("\n");
+      out.write("  <!--[if lt IE 9]>\n");
+      out.write("        <script src=\"../assets/js/ie8-responsive-file-warning.js\"></script>\n");
+      out.write("        <![endif]-->\n");
+      out.write("\n");
+      out.write("  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n");
+      out.write("  <!--[if lt IE 9]>\n");
+      out.write("          <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\n");
+      out.write("          <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\n");
+      out.write("        <![endif]-->\n");
+      out.write("\n");
+      out.write("</head>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<body class=\"nav-md\">\n");
+      out.write("\n");
+      out.write("  <div class=\"container body\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    <div class=\"main_container\">\n");
+      out.write("\n");
+      out.write("      <div class=\"col-md-3 left_col\">\n");
+      out.write("        <div class=\"left_col scroll-view\">\n");
+      out.write("\n");
+      out.write("          <div class=\"navbar nav_title\" style=\"border: 0;\">\n");
+      out.write("            <a href=\"index.html\" class=\"site_title\"><span>National Bank</span></a>\n");
+      out.write("          </div>\n");
+      out.write("          <div class=\"clearfix\"></div>\n");
+      out.write("\n");
+      out.write("          <!-- menu prile quick info -->\n");
+      out.write("          <div class=\"profile\">\n");
+      out.write("            <div class=\"profile_pic\">\n");
+      out.write("                <img src=\"images/user.png\" alt=\"...\" class=\"img-circle profile_img\">\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"profile_info\">\n");
+      out.write("              <span>Welcome,</span>\n");
+      out.write("              <h2>Admin</h2>\n");
+      out.write("              <br>\n");
+      out.write("              <br>\n");
+      out.write("            </div>\n");
+      out.write("          </div>\n");
+      out.write("          <!-- /menu prile quick info -->\n");
+      out.write("\n");
+      out.write("          <br />\n");
+      out.write("\n");
+      out.write("          <!-- sidebar menu -->\n");
+      out.write("          <div id=\"sidebar-menu\" class=\"main_menu_side hidden-print main_menu\">\n");
+      out.write("\n");
+      out.write("            <div class=\"menu_section\">\n");
+      out.write("              <ul class=\"nav side-menu\">\n");
+      out.write("                  <li><a href=\"ad_manage.jsp\"><i class=\"fa fa-home\"></i> Home </a></li>\n");
+      out.write("                  <li><a href=\"ad_managerequest.jsp\"><i class=\"fa fa-inbox\"></i>Manage Request</a>\n");
+      out.write("                </li>\n");
+      out.write("                 <li><a><i class=\"fa fa-user\"></i> User <span class=\"fa fa-chevron-down\"></span></a>\n");
+      out.write("                  <ul class=\"nav child_menu\" style=\"display: none\">\n");
+      out.write("                      <li><a href=\"ad_showuser.jsp\">Show</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_edituser.jsp\">Edit</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_deleteuser.jsp\">Delete</a>\n");
+      out.write("                    </li>\n");
+      out.write("                  \n");
+      out.write("\n");
+      out.write("                  </ul>\n");
+      out.write("                </li>\n");
+      out.write("\n");
+      out.write("                                 <li><a><i class=\"fa fa-list-alt\"></i> Transaction <span class=\"fa fa-chevron-down\"></span></a>\n");
+      out.write("                  <ul class=\"nav child_menu\" style=\"display: none\">\n");
+      out.write("                      <li><a href=\"ad_addtransaction.jsp\">Add</a>\n");
+      out.write("                    </li>\n");
+      out.write("                      <li><a href=\"ad_showtransaction.jsp\">Show</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_managetransaction.jsp\">Manage</a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("           \n");
+      out.write("              <li><a><i class=\"fa fa-list-alt\"></i> History <span class=\"fa fa-chevron-down\"></span></a>\n");
+      out.write("                  <ul class=\"nav child_menu\" style=\"display: none\">\n");
+      out.write("                      <li><a href=\"ad_addhistory.jsp\">Add</a>\n");
+      out.write("                    </li>\n");
+      out.write("                      <li><a href=\"ad_showhistory.jsp\">Show</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_managehistory.jsp\">Manage</a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("                      <li><a><i class=\"fa fa-amazon\"></i> Offers <span class=\"fa fa-chevron-down\"></span></a>\n");
+      out.write("                  <ul class=\"nav child_menu\" style=\"display: none\">\n");
+      out.write("                      <li><a href=\"ad_addoffers.jsp\">Add</a>\n");
+      out.write("                    </li>\n");
+      out.write("                      <li><a href=\"ad_showoffers.jsp\">Show</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_manageoffers.jsp\">Manage</a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("                <li><a><i class=\"fa fa-amazon\"></i> Problems <span class=\"fa fa-chevron-down\"></span></a>\n");
+      out.write("                  <ul class=\"nav child_menu\" style=\"display: none\">\n");
+      out.write("                      <li><a href=\"ad_showproblems.jsp\">Show</a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a href=\"ad_manageproblems.jsp\">Manage</a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("\n");
+      out.write("                <li><a href=\"admin.jsp\"><i class=\"fa fa-lock\"></i>Logout</a>\n");
+      out.write("                </li>\n");
+      out.write("              </ul>\n");
+      out.write("            </div>\n");
+      out.write("   \n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("          </div>\n");
+      out.write("         \n");
+      out.write("          <!-- /menu footer buttons -->\n");
+      out.write("        </div>\n");
+      out.write("      </div>\n");
+      out.write("\n");
+      out.write("      <!-- top navigation -->\n");
+      out.write("      <div class=\"top_nav\">\n");
+      out.write("\n");
+      out.write("        <div class=\"nav_menu\">\n");
+      out.write("          <nav class=\"\" role=\"navigation\">\n");
+      out.write("            <div class=\"nav toggle\">\n");
+      out.write("              <a id=\"menu_toggle\"><i class=\"fa fa-bars\"></i></a>\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("            <ul class=\"nav navbar-nav navbar-right\">\n");
+      out.write("              <li class=\"\">\n");
+      out.write("                <a href=\"javascript:;\" class=\"user-profile dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n");
+      out.write("                    <img src=\"images/user.png\" alt=\"\">Admin\n");
+      out.write("                  <span class=\" fa fa-angle-down\"></span>\n");
+      out.write("                </a>\n");
+      out.write("                <ul class=\"dropdown-menu dropdown-usermenu animated fadeInDown pull-right\">\n");
+      out.write("                    <li><a href=\"admin.jsp\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>\n");
+      out.write("                  </li>\n");
+      out.write("                </ul>\n");
+      out.write("              </li>\n");
+      out.write("\n");
+      out.write("              \n");
+      out.write("        </div>\n");
+      out.write("\n");
+      out.write("      </div>\n");
+      out.write("      <!-- /top navigation -->\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("      <!-- page content -->\n");
+      out.write("<div class=\"right_col\" role=\"main\">\n");
+      out.write("        <div class=\"\">\n");
+      out.write("\n");
+      out.write("          <div class=\"page-title\">\n");
+      out.write("            <div class=\"title_left\">\n");
+      out.write("              <h3>Reply Problems</h3>\n");
+      out.write("            </div>\n");
+      out.write("          </div>\n");
+      out.write("          <div class=\"clearfix\"></div>\n");
+      out.write("          <div class=\"row\">\n");
+      out.write("            <div class=\"col-md-12 col-sm-12 col-xs-12\">\n");
+      out.write("              <div class=\"x_panel\">\n");
+      out.write("                <div class=\"x_title\">\n");
+      out.write("\n");
+      out.write("                  <ul class=\"nav navbar-right panel_toolbox\">\n");
+      out.write("                    <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>\n");
+      out.write("                    </li>\n");
+      out.write("                  </ul>\n");
+      out.write("                  <div class=\"clearfix\"></div>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"x_content\">\n");
+      out.write("                  <br />\n");
+      out.write("                     ");
+ Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/creditcard","root","1234");
+            PreparedStatement pst=conn.prepareStatement("SELECT * FROM problems where username='"+request.getParameter("id")+"'");
+          ResultSet resultset=pst.executeQuery(); 
+        
+      out.write("\n");
+      out.write("\t   \n");
+      out.write(" ");
+
+                       if(resultset.next()) {
+        
+      out.write("\n");
+      out.write("        <h4 style=\"color:blue\">\n");
+      out.write("               <form action=\"Register_Replyproblems\" method=\"post\" style=\"font-size:20px;text-align:left\">\n");
+      out.write("                  User Name: ");
+      out.print(resultset.getString(4));
+      out.write("<br>\n");
+      out.write("                   <input type=\"hidden\" name=\"username\" value=\"");
+      out.print(resultset.getString(4));
+      out.write("\"/>\n");
+      out.write("                    Email: ");
+      out.print(resultset.getString(2));
+      out.write("<br>\n");
+      out.write("                   <input type=\"hidden\" name=\"emailid\" value=\"");
+      out.print(resultset.getString(2));
+      out.write("\"/> \n");
+      out.write("              <div class=\"form-group\">\n");
+      out.write("    <label for=\"message\" class=\"col-md-1 control-label\">Message</label>\n");
+      out.write("    <div class=\"col-md-4\">\n");
+      out.write("     <textarea class=\"form-control\" rows=\"3\"   name=\"message\" required min=\"5\" max=\"10\" placeholder=\"Message\"></textarea>\n");
+      out.write("    </div>\n");
+      out.write("  </div>\n");
+      out.write("          </h4>\n");
+      out.write("                    <button type=\"submit\" class=\"btn btn-success\">Reply</button>\n");
+      out.write("               </form>\n");
+      out.write("        \n");
+      out.write("                         \n");
+      out.write("                   ");
+
+                       }
+                       
+      out.write("\n");
+      out.write("                </div>\n");
+      out.write("        </div>\n");
+      out.write("\n");
+      out.write("        <div class=\"row\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("          <div class=\"col-md-4 col-sm-4 col-xs-12\">\n");
+      out.write("          \n");
+      out.write("            </div>\n");
+      out.write("          </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  <script src=\"js/bootstrap.min.js\"></script>\n");
+      out.write("\n");
+      out.write("  <!-- gauge js -->\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/gauge/gauge.min.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/gauge/gauge_demo.js\"></script>\n");
+      out.write("  <!-- bootstrap progress js -->\n");
+      out.write("  <script src=\"js/progressbar/bootstrap-progressbar.min.js\"></script>\n");
+      out.write("  <script src=\"js/nicescroll/jquery.nicescroll.min.js\"></script>\n");
+      out.write("  <!-- icheck -->\n");
+      out.write("  <script src=\"js/icheck/icheck.min.js\"></script>\n");
+      out.write("  <!-- daterangepicker -->\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/moment/moment.min.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/datepicker/daterangepicker.js\"></script>\n");
+      out.write("  <!-- chart js -->\n");
+      out.write("  <script src=\"js/chartjs/chart.min.js\"></script>\n");
+      out.write("\n");
+      out.write("  <script src=\"js/custom.js\"></script>\n");
+      out.write("\n");
+      out.write("  <!-- flot js -->\n");
+      out.write("  <!--[if lte IE 8]><script type=\"text/javascript\" src=\"js/excanvas.min.js\"></script><![endif]-->\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.pie.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.orderBars.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.time.min.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/date.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.spline.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.stack.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/curvedLines.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/flot/jquery.flot.resize.js\"></script>\n");
+      out.write("  <script>\n");
+      out.write("\n");
+      out.write("  <!-- worldmap -->\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/maps/jquery-jvectormap-2.0.3.min.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/maps/gdp-data.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/maps/jquery-jvectormap-world-mill-en.js\"></script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"js/maps/jquery-jvectormap-us-aea-en.js\"></script>\n");
+      out.write("  <!-- pace -->\n");
+      out.write("\n");
+      out.write("  <!-- /footer content -->\n");
+      out.write("</body>\n");
+      out.write("\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

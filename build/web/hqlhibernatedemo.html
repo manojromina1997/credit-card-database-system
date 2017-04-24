@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+          <form action="Register" method="post">
+              <h1 style="align:center">Create</h1>
+              First Name<input type="text" required name="firstname" placeholder="First Name"><br>
+              Last Name<input type="text" required name="lastname" placeholder="Last Name"><br>
+              Dob<input type="date" required name="dob" ><br>
+               Address<input type="text" required name="address" ><br>
+               City<input type="text" required name="city" ><br>
+               Occupation<input type="text" required name="occupation" ><br>
+               Qualification<input type="text" required name="qualification" ><br>
+               Annualincome<input type="text" required name="annualincome" ><br>
+               EmailId<input type="email" required name="emailid" ><br>
+               Mobile<input type="number" required name="mobile" ><br>
+             
+            <input type="submit" value="register">
+            
+          </form>
+        <hr>
+         <form action="Update" method="post">
+               <h1 style="align:center">Update</h1>
+             id:<input type="number" name="id"><br>
+          First Name<input type="text" required name="firstname" placeholder="First Name"><br>
+              Last Name<input type="text" required name="lastname" placeholder="Last Name"><br>
+            Dob<input type="date" required name="dob" ><br>
+            Address<input type="text" required name="address" ><br>
+              City<input type="text" required name="city" ><br>
+               Occupation<input type="text" required name="occupation" ><br>
+               Qualification<input type="text" required name="qualification" ><br>
+               Annualincome<input type="text" required name="annualincome" ><br>
+               EmailId<input type="email" required name="emailid" ><br>
+               Mobile<input type="number" required name="mobile" ><br>
+       
+            <input type="submit" value="Update">
+            
+         </form>
+        <hr>
+         <form action="Delete" method="post">
+               <h1 style="align:center">Delete</h1>
+             id:<input type="number" name="id"><br>
+             <input type="submit" value="Delete"><br><br>
+        </form>
+        <hr>
+        
+       
+            <form action="Show" method="post">
+                <h1 style="align:center">Show</h1>
+            
+                <input type="submit" value="Show">
+        </form>
+        <hr>
+    </body>
+</html>

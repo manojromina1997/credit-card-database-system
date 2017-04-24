@@ -1,0 +1,2 @@
+main page of user =mainboot.jsp
+admin page        =admin.jsp
